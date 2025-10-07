@@ -16,6 +16,8 @@ def c():
     s.run("pkill -9 xmrig 2>/dev/null", shell=True)
     s.run(f"rm -rf {R} 2>/dev/null", shell=True)
     s.run("sudo sysctl -w vm.nr_hugepages=0 2>/dev/null", shell=True)
+    print("
+Cleaned")
     sys.exit(0)
 
 signal.signal(signal.SIGINT, lambda x, y: c())
